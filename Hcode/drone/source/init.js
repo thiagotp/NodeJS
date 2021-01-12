@@ -29,6 +29,8 @@ const getSocker = ()=>{
         onBack: async(dist) => {await cmder.sendBack(dist)},
         onRight: async(dist) => {await cmder.sendRight(dist)},
         onLeft: async(dist) => {await cmder.sendLeft(dist)},
+        onCw: async(dist) => {await cmder.sendCw(dist)},
+        onCcw: async(dist) => {await cmder.sendCcw(dist)},
         onFlip: async() => {await cmder.sendFlip()},
         onBattery: async() => {await cmder.sendBattery()}
     })

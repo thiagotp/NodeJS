@@ -30,6 +30,16 @@ class CommandParser {
                     drone.onLeft(dist)
                     return true
                     break
+                case 'cw':
+                    const [, dist] = line.split(" ")
+                    drone.onCw(dist)
+                    return true
+                    break
+                case 'ccw':
+                    const [, dist] = line.split(" ")
+                    drone.onCcw(dist)
+                    return true
+                    break
                 case 'battery':
                     drone.onBaterry()
                     return true

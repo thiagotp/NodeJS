@@ -88,7 +88,31 @@ class Commander {
         })
     }
     
-    sendFlip(distance=20){
+    sendCw(distance=20){
+        return new Promise((resolve, reject)=>{
+            this.socket.send(`cw ${distance}`, 0, `cw ${distance}`.length, this.port, this.host, (err)=>{
+                if(err){
+                    return reject(err)
+                }else{
+                    return resolve()
+                }
+            })
+        })
+    }
+    
+    sendCcw(distance=20){
+        return new Promise((resolve, reject)=>{
+            this.socket.send(`ccw ${distance}`, 0, `ccw ${distance}`.length, this.port, this.host, (err)=>{
+                if(err){
+                    return reject(err)
+                }else{
+                    return resolve()
+                }
+            })
+        })
+    }
+    
+    sendFlip(){
         return new Promise((resolve, reject)=>{
             this.socket.send(`flip b`, 0, `flip b`.length, this.port, this.host, (err)=>{
                 if(err){
