@@ -1,0 +1,23 @@
+###acessando via get
+GET http://localhost:3000/subscribers
+###
+POST http://localhost:3000/subscribers
+Content-Type: application/json
+
+{
+    "userName": "Pires",
+    "userChannel": "Curso"
+}
+###
+GET http://localhost:3000/subscribers/6020383462b15b19a823fca0
+###
+DELETE http://localhost:3000/subscribers/6020383462b15b19a823fca0
+###
+PATCH  http://localhost:3000/subscribers/602038a162b15b19a823fca2
+Content-Type: application/json
+
+{
+    "userName": "Teixeirinha",
+    "userChannel": "Curso"
+}
+###
